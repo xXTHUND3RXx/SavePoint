@@ -1,0 +1,10 @@
+{
+  "name": "savepoint",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Organize sua biblioteca de jogos, acompanhe seu progresso e controle o que ainda quer jogar.",
+  "scripts": {
+    "test": "npm --prefix backend test",
+    "dev": "npm --prefix backend run dev"
+  }
+}
