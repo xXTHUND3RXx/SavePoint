@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "savepoint": {
+      "command": "node",
+      "args": ["mcp/savepoint-mcp-server/build/index.js"]
+    }
+  }
+}

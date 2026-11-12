@@ -7,7 +7,15 @@ Guia para trabalhar neste repositório.
 SavePoint: aplicação para jogadores organizarem a biblioteca de jogos, acompanharem o progresso e controlarem o que ainda querem jogar.
 
 - `backend/`: API REST em Node.js + TypeScript + Express 5, testes com Jest. **Implementado.**
+- `mcp/savepoint-mcp-server/`: servidor MCP (stdio) que chama a API do backend. **Implementado.** Registrado em `.mcp.json` na raiz.
 - `frontend/`: ainda não existe. Será uma pasta irmã de `backend/`.
+
+## MCP — `mcp/savepoint-mcp-server/`
+
+- Duas ferramentas: `listar_jogos` (filtros `status`/`platform`) e `atualizar_status_jogo` (`id` + `status`). Só usam `GET /games` e `PATCH /games/:id/status`.
+- Não acessa o arquivo JSON direto: depende do backend rodando em `http://localhost:3333` (`SAVEPOINT_API_URL` muda a porta; só aceita HTTP local).
+- Projeto independente do `backend/`: tem `package.json` e `node_modules` próprios. Compilar com `npm run mcp:build` na raiz (gera `build/`, ignorado pelo git).
+- Se mudar o contrato da API (rotas, status, formato `{ data, total }`), atualize `src/index.ts` do MCP.
 
 ## Comandos
 

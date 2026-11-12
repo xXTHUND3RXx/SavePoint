@@ -21,8 +21,15 @@ SavePoint/
 │   ├── src/          código da aplicação
 │   ├── tests/        testes automatizados (Jest)
 │   └── data/         onde os jogos ficam salvos (arquivo JSON local)
+├── mcp/
+│   └── savepoint-mcp-server/   permite ao Claude consultar a biblioteca e atualizar o progresso
+├── .mcp.json         registra o servidor MCP no Claude Code
 └── frontend/         (em breve)
 ```
+
+## Usar com o Claude (MCP)
+
+O Claude Code pode consultar a biblioteca e atualizar o progresso dos jogos por conversa ("quais jogos de PC ainda não comecei?"). Veja o passo a passo em [`mcp/savepoint-mcp-server/README.md`](mcp/savepoint-mcp-server/README.md).
 
 ## Como rodar
 

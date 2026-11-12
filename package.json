@@ -5,6 +5,7 @@
   "description": "Organize sua biblioteca de jogos, acompanhe seu progresso e controle o que ainda quer jogar.",
   "scripts": {
     "test": "npm --prefix backend test",
-    "dev": "npm --prefix backend run dev"
+    "dev": "npm --prefix backend run dev",
+    "mcp:build": "npm --prefix mcp/savepoint-mcp-server run build"
   }
 }
